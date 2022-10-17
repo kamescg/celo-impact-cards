@@ -1,0 +1,140 @@
+.computer-container {
+  width: 150%;
+}
+
+.content h3 {
+display:block;
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+.min-h-vh {
+  min-height: 100vh;
+}
+
+.content p {
+  @apply my-2;
+}
+
+.content ul {
+  @apply my-6;
+}
+
+.react-tiny-popover-container {
+  z-index: 9999;
+}
+
+.min-h-vh {
+  min-height: 100vh;
+}
+
+.card {
+  @apply bg-white dark:bg-gray-700 dark:text-white border-2 dark:border-gray-700 rounded-lg p-6 shadow-sm hover:shadow-md hover:bg-white transition-all duration-300 ease-in-out;
+}
+
+.input {
+  @apply border-0 px-3 py-3 placeholder-neutral-400 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring ease-linear transition-all duration-150;
+}
+
+.input-lg {
+  @apply border-0 px-3 py-4 placeholder-neutral-400 text-gray-600 bg-white rounded text-xl shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150;
+}
+
+.btn {
+  @apply py-2 px-4 font-semibold rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-75 duration-200;
+}
+
+.btn-white {
+  @apply bg-white text-gray-600 hover:bg-gray-50 focus:ring-gray-400;
+}
+
+.btn-green {
+  @apply bg-green-600 hover:bg-green-700 focus:ring-green-400 text-white;
+}
+
+.btn-purple {
+  @apply bg-purple-600 hover:bg-purple-700 focus:ring-purple-400 text-white;
+}
+
+.btn-emerald {
+  @apply bg-emerald-600 hover:bg-emerald-700 focus:ring-emerald-400 text-white;
+}
+
+.btn-blue {
+  @apply bg-blue-600 hover:bg-blue-700 focus:ring-blue-400 text-white;
+}
+
+
+.btn-small {
+  @apply text-sm py-1 px-3;
+}
+.btn-sm {
+  @apply text-sm;
+}
+.btn-lg {
+  @apply text-lg px-5 py-4;
+}
+
+
+
+
+
+.toggle-theme-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.toggle-theme-wrapper span {
+  font-size: 28px;
+}
+
+.toggle-theme {
+  position: relative;
+  display: inline-block;
+  height: 34px;
+  width: 60px;
+}
+
+.toggle-theme input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  position: absolute;
+  cursor: pointer;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: 0.2s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+input:checked + .slider {
+  background-color: cornflowerblue;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

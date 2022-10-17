@@ -1,0 +1,46 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "globalDependencies": [".env.*", "$ALCHEMY_KEY"],
+  "pipeline": {
+    "chain": {
+      "dependsOn": ["^chain"],
+      "outputs": [""],
+      "inputs": ["contracts/**/*.sol"]
+    },
+    "chain:fork": {
+      "dependsOn": ["^chain:fork"],
+      "outputs": [""],
+      "inputs": ["contracts/**/*.sol"]
+    },
+    "compile": {
+      "dependsOn": ["^compile"],
+      "outputs": [""],
+      "inputs": ["contracts/**/*.sol"]
+    },
+    "dev": {
+      "outputs": [""]
+    },
+    "dev:fork": {
+      "outputs": [""]
+    },
+    "lint": {
+      "outputs": [""]
+    },
+    "watch": {
+      "dependsOn": ["^watch"]
+    },
+    "build": {
+      "dependsOn": ["^build"]
+    },
+    "clean": {
+      "dependsOn": ["^clean"]
+    },
+    "lab": {
+      "dependsOn": ["^watch", "^chain", "@impact-cards/react-app#dev"],
+      "outputs": [""]
+    },
+    "lab:fork": {
+      "dependsOn": ["^watch", "chain:fork", "@impact-cards/react-app#dev:fork"]
+    }
+  }
+}
